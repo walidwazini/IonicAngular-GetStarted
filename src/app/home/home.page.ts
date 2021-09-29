@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,10 @@ export class HomePage {
   counter = 0
   warning = ''
 
-  constructor() {}
+  constructor(
+    public toastController: ToastController,
+
+    ) {}
 
   sayHello(){
     alert('Hello Walid')
@@ -27,13 +31,18 @@ export class HomePage {
     console.log(message)
     this.counter = 0
   }
-  minusHandler(){
+  async minusHandler(){
     let message = 'minus'
     if (this.counter > 0){
       this.counter--
     }
     else{
-      this.warning = 'YOu reach the minimum'
+      //this.warning = 'YOu reach the minimum'
+      const toast = await this.toastController.create({
+        message: 'You\'ve reached the minimum value',
+        duration: 2000
+      });
+      toast.present();
     }
   }
 
