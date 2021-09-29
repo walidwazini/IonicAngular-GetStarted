@@ -11,6 +11,7 @@ export class HomePage {
   name = 'Walid'
   age = 25
   counter = 0
+  warning = ''
 
   constructor() {}
 
@@ -28,7 +29,12 @@ export class HomePage {
   }
   minusHandler(){
     let message = 'minus'
-    this.counter--
+    if (this.counter > 0){
+      this.counter--
+    }
+    else{
+      this.warning = 'YOu reach the minimum'
+    }
   }
 
 }
