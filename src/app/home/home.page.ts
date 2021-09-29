@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  // New variable name value is Walid
+  name = 'Walid'
+
   constructor() {}
 
 }
