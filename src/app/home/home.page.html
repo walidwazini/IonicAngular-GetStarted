@@ -19,5 +19,11 @@
    <!-- interpolation -->
    <p>My name is {{name}}, {{age}} years old </p>
    <ion-button color="success" (click)='sayHello()' >Say Helllo</ion-button>
+   <hr>
+   <h3>Counter</h3>
+   <p class="">{{counter}}</p>
+   <ion-button color="success" (click)='addHandler()' >Increment</ion-button>
+   <ion-button color="secondary" (click)='resetHandler()' >Reset</ion-button>
+   <ion-button color="danger" (click)='minusHandler()' >Decrement</ion-button>
   </div>
 </ion-content>
