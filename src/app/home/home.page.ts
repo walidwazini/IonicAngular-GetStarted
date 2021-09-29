@@ -9,7 +9,12 @@ export class HomePage {
 
   // New variable name value is Walid
   name = 'Walid'
+  age = 25
 
   constructor() {}
+
+  sayHello(){
+    alert('Hello Walid')
+  }
 
 }
