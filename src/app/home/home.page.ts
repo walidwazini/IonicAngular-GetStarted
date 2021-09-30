@@ -17,6 +17,9 @@ export class HomePage {
   counter = 0;
   warning = '';
 
+  byeName = ''
+  byeAge = 0
+
   constructor(
     public toastController: ToastController,
     public actionSheetController: ActionSheetController,
@@ -108,6 +111,10 @@ export class HomePage {
     await show.present()
 
     const {role} = await show.onDidDismiss()
+  }
+
+  sayGoodbye(){
+    console.log(`Gopdbye ${this.byeName} and your ${this.byeAge}`)
   }
 
 
